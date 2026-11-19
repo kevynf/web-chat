@@ -8,7 +8,7 @@
   box-sizing: border-box;
   max-width: calc(100vw - 28px);
   padding: 4px 8px;
-  border-radius: 10px;
+  border-radius: var(--radius-box);
   background-color: var(--dsw-alias-tooltip-bg);
   color: var(--dsw-static-neutral-bluish-00);
   font-size: 12px;

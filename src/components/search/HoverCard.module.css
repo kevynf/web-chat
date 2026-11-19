@@ -4,8 +4,10 @@
   box-sizing: border-box;
   max-width: 355px;
   padding: 16px;
-  border-radius: 12px;
-  border: 1px solid var(--dsw-alias-border-inverted);
-  background: var(--dsw-specific-menu);
+  border-radius: var(--radius-box);
+  border: 1px solid var(--dsw-alias-border-l1);
+  background: color-mix(in srgb, var(--dsw-specific-menu) 94%, transparent);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(150%);
   box-shadow: var(--dsw-shadow-lv3);
 }

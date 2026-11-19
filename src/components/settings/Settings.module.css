@@ -33,7 +33,7 @@
   margin: 0 4px;
   padding: 9px 10px 9px 8px;
   border: none;
-  border-radius: 12px;
+  border-radius: var(--radius-box);
   background-color: transparent;
   color: var(--dsw-alias-label-primary);
   font: inherit;
@@ -54,9 +54,6 @@
     background-color: var(--dsw-alias-interactive-bg-hover);
   }
 
-  &:focus-visible {
-    box-shadow: 0 0 0 2px var(--dsw-alias-button-primary-fill);
-  }
 }
 
 .content {
@@ -169,7 +166,7 @@
   height: 82px;
   padding: 21px 32px;
   border: 1px solid var(--dsw-alias-border-l2);
-  border-radius: 12px;
+  border-radius: var(--radius-box);
   background-color: transparent;
   color: var(--dsw-alias-label-primary);
   font: inherit;
@@ -187,9 +184,6 @@
     background-color: var(--dsw-specific-selector);
   }
 
-  &:focus-visible {
-    box-shadow: 0 0 0 2px var(--dsw-alias-button-primary-fill);
-  }
 }
 
 .description {
@@ -224,7 +218,7 @@
 .apiKeySaved {
   justify-content: space-between;
   padding: 0 10px 0 16px;
-  border-radius: 28px;
+  border-radius: var(--radius-box);
   background-color: var(--dsw-specific-login-input);
 }
 
@@ -239,7 +233,7 @@
 .apiKeyInput {
   gap: 12px;
   padding: 0 14px;
-  border-radius: 22px;
+  border-radius: var(--radius-box);
   border: 1px solid var(--dsw-alias-border-l2);
   transition: border-color var(--ds-transition-duration) var(--ds-ease-in-out);
 
@@ -263,6 +257,10 @@
       color: var(--dsw-alias-label-caption);
     }
   }
+}
+
+.apiKeyInput input:focus-visible {
+  outline: none;
 }
 
 .divider {
@@ -295,7 +293,7 @@
     max-width: none;
     height: calc(100% - 64px);
     max-height: 800px;
-    border-radius: 24px 24px 0 0;
+    border-radius: var(--radius-box) var(--radius-box) 0 0;
   }
 
   .dialogMain {
@@ -370,7 +368,7 @@
     height: 52px;
     padding: 0 12px 0 16px;
     border: none;
-    border-radius: 40px;
+    border-radius: var(--radius-box);
     background-color: var(--dsw-specific-login-input);
     font-size: 16px;
   }
@@ -392,7 +390,7 @@
   height: 52px;
   margin: 16px 8px 0;
   border: none;
-  border-radius: 100px;
+  border-radius: var(--radius-box);
   background-color: var(--dsw-alias-button-primary-fill);
   color: var(--dsw-static-neutral-bluish-00);
   font: inherit;

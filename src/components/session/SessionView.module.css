@@ -3,16 +3,31 @@
   inset: 0;
   display: flex;
   flex-direction: column;
+  isolation: isolate;
+}
+
+.view::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: color-mix(in srgb, var(--dsw-alias-bg-base) var(--glass-opacity), transparent);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+  pointer-events: none;
 }
 
 .header {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  height: 60px;
-  padding: 12px 18px 0;
+  height: var(--spacing-bar);
+  padding: 0 12px 0 18px;
   box-sizing: border-box;
-  background: var(--dsw-alias-bg-base);
+  border-bottom: 1px solid var(--dsw-alias-border-l1);
+  background: color-mix(in srgb, var(--dsw-alias-bg-base) var(--glass-opacity), transparent);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(150%);
 }
 
 .title {

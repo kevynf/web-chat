@@ -8,10 +8,17 @@
   cursor: text;
   font-size: 16px;
   line-height: var(--line-height);
-  border-radius: 24px;
+  border-radius: var(--radius-box);
   border: 1px solid var(--dsw-alias-border-l2-darkmode-thin);
-  background: var(--dsw-specific-input-major);
+  background: color-mix(in srgb, var(--dsw-specific-input-major) var(--glass-opacity), transparent);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(150%);
   overflow: hidden;
+}
+
+.wrapper:has(.textarea:focus-visible) {
+  border-color: var(--dsw-alias-brand-primary);
+  box-shadow: 0 0 0 1px var(--dsw-alias-brand-primary);
 }
 
 .session {
@@ -46,7 +53,7 @@
   box-sizing: border-box;
   width: 64px;
   height: 64px;
-  border-radius: 16px;
+  border-radius: var(--radius-box);
   border: 1px solid var(--dsw-alias-border-l2);
   overflow: hidden;
   background-color: var(--dsw-alias-bg-skeleton);
@@ -147,7 +154,7 @@
   height: 18px;
   padding: 0;
   border: none;
-  border-radius: 50%;
+  border-radius: var(--radius-box);
   color: var(--dsw-alias-label-primary-inverted);
   background-color: var(--dsw-alias-button-contrast-fill);
   filter: drop-shadow(0 0 0.5px rgba(0, 0, 0, 0.2));
@@ -199,6 +206,10 @@
     color: var(--dsw-alias-label-caption);
     user-select: none;
   }
+}
+
+.textarea:focus-visible {
+  outline: none;
 }
 
 /* 录音中由频谱接管第一行，隐藏正文但保留高度 */
@@ -263,7 +274,7 @@
   gap: 4px;
   height: 34px;
   padding: 0 12px;
-  border-radius: 18px;
+  border-radius: var(--radius-box);
   border: 1px solid var(--dsw-alias-border-l2);
   background-color: transparent;
   color: var(--dsw-alias-label-primary);
@@ -315,7 +326,7 @@
   margin-left: 6px;
   padding: 0;
   border: none;
-  border-radius: 50%;
+  border-radius: var(--radius-box);
   background: var(--dsw-alias-button-primary-fill);
   color: var(--dsw-static-neutral-bluish-00);
   cursor: pointer;

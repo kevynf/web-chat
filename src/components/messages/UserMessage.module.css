@@ -31,8 +31,8 @@
   max-width: calc(100% - 88px);
   box-sizing: border-box;
   padding: 10px 16px;
-  border-radius: 22px;
-  font-size: 16px;
+  border-radius: var(--radius-box);
+  font-size: 15px;
   line-height: 24px;
   color: var(--dsw-alias-label-primary);
   background-color: var(--dsw-specific-bubble);
@@ -74,9 +74,13 @@
   width: 100%;
   box-sizing: border-box;
   border: 1px solid var(--dsw-alias-brand-primary);
-  border-radius: 22px;
+  border-radius: var(--radius-box);
   background-color: var(--dsw-alias-bg-base);
   overflow: hidden;
+}
+
+.editor:has(.textarea:focus-visible) {
+  box-shadow: 0 0 0 1px var(--dsw-alias-brand-primary);
 }
 
 .textarea {
@@ -94,6 +98,10 @@
   line-height: 24px;
   color: var(--dsw-alias-label-primary);
   background: transparent;
+}
+
+.textarea:focus-visible {
+  outline: none;
 }
 
 .editorActions {

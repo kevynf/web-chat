@@ -3,7 +3,7 @@
   inset: 0;
   display: flex;
   overflow: hidden;
-  background-color: var(--dsw-alias-bg-base);
+  background-color: var(--dsw-specific-sidebar-fill);
 }
 
 .main {
@@ -12,10 +12,13 @@
   flex-direction: column;
   flex: 1;
   min-width: 0;
+  isolation: isolate;
+  background-color: var(--dsw-alias-bg-base);
 }
 
 .content {
   position: relative;
+  z-index: 1;
   flex: 1;
   min-height: 0;
 }

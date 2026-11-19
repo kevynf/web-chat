@@ -8,7 +8,9 @@
   height: 100%;
   border-left: 1px solid var(--dsw-alias-border-l2);
   color: var(--dsw-alias-label-primary);
-  background: var(--dsw-alias-bg-base);
+  background: color-mix(in srgb, var(--dsw-alias-bg-base) 92%, transparent);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(150%);
 }
 
 .header {
@@ -46,7 +48,7 @@
 .item {
   margin-bottom: 6px;
   padding: 12px;
-  border-radius: 12px;
+  border-radius: var(--radius-box);
   transition: background-color var(--ds-transition-duration) var(--ds-ease-in-out);
 
   &:hover {

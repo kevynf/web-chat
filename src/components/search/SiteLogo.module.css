@@ -1,7 +1,7 @@
 .logo {
   display: inline-flex;
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: var(--radius-tile);
   background-color: var(--dsw-alias-markdown-citation);
 }
 

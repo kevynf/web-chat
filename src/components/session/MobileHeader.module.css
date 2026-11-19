@@ -3,8 +3,12 @@
   align-items: center;
   flex-shrink: 0;
   box-sizing: border-box;
-  height: 60px;
-  padding: 12px 10px 4px;
+  height: var(--spacing-bar);
+  padding: 0 10px;
+  border-bottom: 1px solid var(--dsw-alias-border-l1);
+  background: color-mix(in srgb, var(--dsw-alias-bg-base) var(--glass-opacity), transparent);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(150%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(150%);
 }
 
 .title {

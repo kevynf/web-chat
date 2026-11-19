@@ -1,6 +1,12 @@
 .ds-markdown {
   font: var(--dsw-font-markdown-base);
+  font-variant-ligatures: no-contextual;
   color: var(--dsw-alias-label-primary);
+}
+
+.ds-markdown :is(h1, h2, h3, h4, h5, h6, th, td, code, pre, .ds-markdown-cite) {
+  font-variant-ligatures: no-contextual;
+  font-feature-settings: 'kern';
 }
 
 .ds-markdown strong {
@@ -76,9 +82,12 @@
 
 .ds-markdown a:not(.ds-a) {
   color: var(--dsw-alias-brand-text);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--dsw-alias-brand-text) 40%, transparent);
+  text-underline-offset: 0.18em;
   transition: box-shadow var(--ds-transition-duration) var(--ds-ease-in-out);
   position: relative;
-  text-decoration: none;
   border-left: 3px solid rgba(255 255 255 / 0);
   border-right: 3px solid rgba(255 255 255 / 0);
   border-top: 2px solid rgba(255 255 255 / 0);
@@ -88,12 +97,14 @@
   &:hover,
   :focus {
     outline: none;
-    text-decoration: underline var(--dsw-alias-brand-text);
+    text-decoration-thickness: 2px;
+    text-decoration-color: currentColor;
   }
 }
 
 .ds-markdown a:not(.ds-a):focus-visible {
-  box-shadow: 0 0 0 2px var(--dsw-alias-brand-text);
+  outline: 2px solid var(--dsw-alias-brand-primary);
+  outline-offset: 3px;
 }
 
 .ds-markdown li > ul,
@@ -197,7 +208,7 @@
   font-family: var(--ds-font-family-code);
   font-size: 0.875em !important;
   background-color: var(--dsw-alias-markdown-inline-code);
-  border-radius: 6px;
+  border-radius: var(--radius-box);
   padding: 0 5px;
 }
 .ds-markdown {
@@ -280,7 +291,7 @@
   padding: 0 4px;
   min-width: 14px;
   font-variant: tabular-nums;
-  border-radius: 6px 6px 6px 0;
+  border-radius: var(--radius-box) var(--radius-box) var(--radius-box) 0;
   box-shadow: inset 0 0 0 0.5px var(--dsw-alias-border-l1);
   box-sizing: border-box;
   user-select: none;
@@ -312,7 +323,7 @@
 
 .md-code-block {
   --dsl-code-block-banner-background-color: var(--dsw-alias-markdown-code-block-banner);
-  --dsl-code-block-border-radius: 12px;
+  --dsl-code-block-border-radius: var(--radius-box);
   --dsl-code-block-banner-font: var(--dsw-font-xs-13);
   --dsl-code-block-content-font: var(--dsw-font-markdown-code-block);
 

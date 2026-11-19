@@ -7,7 +7,7 @@
   width: 240px;
   min-height: 64px;
   padding: 0 12px 0 14px;
-  border-radius: 16px;
+  border-radius: var(--radius-box);
   border: 1px solid var(--dsw-alias-border-l2);
   background-color: var(--dsw-specific-input-major);
   cursor: default;
@@ -113,7 +113,7 @@
   height: 18px;
   padding: 0;
   border: none;
-  border-radius: 50%;
+  border-radius: var(--radius-box);
   color: var(--dsw-alias-label-primary-inverted);
   background-color: var(--dsw-alias-button-contrast-fill);
   cursor: pointer;
